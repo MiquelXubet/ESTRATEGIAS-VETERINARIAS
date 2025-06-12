@@ -1,0 +1,45 @@
+/* Header completo */
+.main-header {
+  background-color: #ffffff;
+  padding: 10px 0;
+}
+
+/* Contenido centrado con ancho limitado */
+.main-header-content {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+  /* padding: 0 20px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  max-height: 250px;
+  height: auto;
+  width: auto;
+  display: block;
+}
+
+/* Navegación */
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 80px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #12269e;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-list a:hover {
+  color: #f9b347; /* opcional: rojo YouTube */
+}
