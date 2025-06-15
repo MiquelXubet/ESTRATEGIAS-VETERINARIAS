@@ -1,8 +1,8 @@
 import React from "react";
-import servicios from "../../Data/ServiciosData";
-import "./Servicios.css";
+import servicios from "../../Data/ProductosData";
+import "./Productos.css";
 
-function Servicios() {
+function Productos() {
   return (
     <section className="servicios">
       <h2>Nuestros Servicios</h2>
@@ -20,4 +20,4 @@ function Servicios() {
   );
 }
 
-export default Servicios;
+export default Productos;

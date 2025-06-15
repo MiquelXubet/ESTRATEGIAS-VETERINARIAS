@@ -1,10 +1,9 @@
-import "./App.css";
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./Components/Layout/Layout";
 import Home from "./Components/Pages/Home";
 import Contacto from "./Components/Pages/Contacto";
-import Servicios from "./Components/Servicios/Servicios";
+import Servicios from "./Components/Pages/Servicios";
 
 function App() {
   return (
