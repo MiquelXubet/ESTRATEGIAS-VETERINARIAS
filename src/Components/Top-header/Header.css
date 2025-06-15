@@ -1,0 +1,17 @@
+.top-header {
+  background-color: #8ef312;
+  color: #12269e;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.top-header-content {
+  width: 100%;
+  max-width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

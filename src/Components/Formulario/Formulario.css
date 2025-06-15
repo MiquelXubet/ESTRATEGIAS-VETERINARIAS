@@ -1,0 +1,75 @@
+.formulario-contacto {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formulario-de-contacto {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.formulario-campos div {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+input,
+textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: none;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+.boton-enviar {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #00a896;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-enviar:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.boton-enviar:hover:not(:disabled) {
+  background-color: #028f84;
+}
+
+.mensaje-enviado {
+  background-color: #d4edda;
+  color: #155724;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
