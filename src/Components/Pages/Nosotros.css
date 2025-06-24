@@ -1,0 +1,44 @@
+.nosotros-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero-nosotros {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #f0fdfb;
+  border-radius: 15px;
+}
+
+.hero-nosotros h1 {
+  font-size: 2.5rem;
+  color: #00a896;
+}
+
+.hero-nosotros p {
+  font-size: 1.2rem;
+  color: #444;
+  margin-top: 1rem;
+}
+
+.mision-vision {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.mision-vision div h2 {
+  color: #028f84;
+}
+
+.valores ul {
+  list-style: none;
+  padding: 0;
+}
+
+.valores li {
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+}

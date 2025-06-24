@@ -1,5 +1,5 @@
 import React from "react";
-import Opiniones from "../../Data/OpinionesData";
+import Opiniones from "../../data/OpinionesData";
 import "./Testimonios.css";
 
 function Testimonios() {

@@ -1,5 +1,5 @@
 import React from "react";
-import servicios from "../../Data/ProductosData";
+import servicios from "../../data/ProductosData";
 import "./Productos.css";
 
 function Productos() {

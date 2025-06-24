@@ -1,4 +1,4 @@
-import ayuda from "../../Data/AyudaData";
+import ayuda from "../../data/AyudaData";
 import "./ComoAyudamos.css";
 import React from "react";
 
