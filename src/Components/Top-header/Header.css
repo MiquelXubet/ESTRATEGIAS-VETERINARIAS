@@ -1,17 +1,47 @@
+/* Base: móvil */
 .top-header {
   background-color: #8ef312;
   color: #12269e;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
-  padding: 5px 10px;
+  padding: 5px 8px;
   display: flex;
   justify-content: center;
 }
 
 .top-header-content {
   width: 100%;
-  max-width: 90%;
+  max-width: 95%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 10px;
+}
+
+/* Tablets (≥ 600px) */
+@media (min-width: 600px) {
+  .top-header {
+    font-size: 1.1rem;
+    padding: 6px 12px;
+  }
+
+  .top-header-content {
+    max-width: 90%;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+
+/* Desktop (≥ 1024px) */
+@media (min-width: 1024px) {
+  .top-header {
+    font-size: 1.2rem;
+    padding: 5px 10px;
+  }
+
+  .top-header-content {
+    max-width: 90%;
+    justify-content: space-between;
+    gap: 30px;
+  }
 }

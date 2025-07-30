@@ -1,6 +1,23 @@
+/* Base: móvil (mobile first) */
 .icons {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 15px; /* más pequeño en móvil para no ocupar tanto espacio */
+  flex-wrap: wrap; /* permite que los íconos salten a otra línea si no caben */
+  padding: 0 1rem; /* un poco de espacio horizontal */
+}
+
+/* Tablets (≥600px) */
+@media (min-width: 600px) {
+  .icons {
+    gap: 25px; /* más separación en pantallas medianas */
+  }
+}
+
+/* Desktop (≥1024px) */
+@media (min-width: 1024px) {
+  .icons {
+    gap: 30px; /* espacio más amplio en escritorio */
+  }
 }

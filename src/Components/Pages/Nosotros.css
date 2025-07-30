@@ -1,23 +1,25 @@
+/* === Base: Mobile First === */
 .nosotros-container {
-  max-width: 900px;
+  width: 100%;
+  max-width: 90%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 .hero-nosotros {
   text-align: center;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   background-color: #f0fdfb;
   border-radius: 15px;
 }
 
 .hero-nosotros h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #00a896;
 }
 
 .hero-nosotros p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #444;
   margin-top: 1rem;
 }
@@ -31,6 +33,13 @@
 
 .mision-vision div h2 {
   color: #028f84;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.mision-vision div p {
+  font-size: 1rem;
+  color: #333;
 }
 
 .valores ul {
@@ -39,6 +48,47 @@
 }
 
 .valores li {
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding: 0.5rem 0;
+  color: #444;
+}
+
+/* === Tablets (≥600px) === */
+@media (min-width: 600px) {
+  .hero-nosotros h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-nosotros p {
+    font-size: 1.2rem;
+  }
+
+  .mision-vision div h2 {
+    font-size: 1.8rem;
+  }
+
+  .mision-vision div p {
+    font-size: 1.1rem;
+  }
+
+  .valores li {
+    font-size: 1.1rem;
+  }
+}
+
+/* === Desktop (≥1024px) === */
+@media (min-width: 1024px) {
+  .nosotros-container {
+    max-width: 1600px;
+    padding: 2rem;
+  }
+
+  .mision-vision {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .mision-vision div {
+    width: 48%;
+  }
 }

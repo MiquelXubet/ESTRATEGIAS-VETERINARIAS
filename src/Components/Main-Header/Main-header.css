@@ -1,39 +1,94 @@
-/* Header completo */
+/* === Base: Mobile First === */
 .main-header {
   background-color: #ffffff;
   padding: 10px 0;
 }
 
-/* Contenido centrado con ancho limitado */
 .main-header-content {
   width: 100%;
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
-  /* padding: 0 20px; */
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  gap: 1rem;
+  text-align: center;
+  position: relative; /* para posicionar el botón */
 }
 
 /* Logo */
 .logo {
-  max-height: 250px;
+  max-height: 120px;
   height: auto;
   width: auto;
   display: block;
 }
 
+/* Botón hamburguesa (visible móvil/tablet) */
+.menu-toggle {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.menu-toggle span,
+.menu-toggle span::before,
+.menu-toggle span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #12269e;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle span {
+  top: 50%;
+  margin-top: -2px;
+}
+
+.menu-toggle span::before {
+  content: "";
+  top: -10px;
+}
+
+.menu-toggle span::after {
+  content: "";
+  top: 10px;
+}
+
 /* Navegación */
 .nav-list {
-  display: flex;
+  display: none; /* ocultamos menú por defecto en móvil/tablet */
+  flex-direction: column;
+  align-items: center;
   list-style: none;
-  gap: 80px;
+  gap: 1rem;
   margin: 0;
   padding: 0;
+  background: white;
+  width: 100%;
+  position: absolute;
+  top: 60px; /* justo debajo del header */
+  left: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 10px 10px;
+  z-index: 999;
+}
+
+/* Cuando el menú está activo (mostrar) */
+.nav-list.active {
+  display: flex;
 }
 
 .nav-list a {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   text-decoration: none;
   color: #12269e;
   font-weight: bold;
@@ -41,5 +96,56 @@
 }
 
 .nav-list a:hover {
-  color: #f9b347; /* opcional: rojo YouTube */
+  color: #f9b347;
+}
+
+/* === Tablets (≥600px) === */
+@media (min-width: 600px) {
+  .main-header-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .logo {
+    max-height: 180px;
+  }
+
+  /* Ocultar botón hamburguesa en tablet y desktop */
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex !important; /* forzar mostrar menú */
+    position: static;
+    flex-direction: row;
+    gap: 2rem;
+    width: auto;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .nav-list a {
+    font-size: 1.4rem;
+  }
+}
+
+/* === Desktop (≥1024px) === */
+@media (min-width: 1024px) {
+  .main-header-content {
+    max-width: 80%;
+  }
+
+  .logo {
+    max-height: 250px;
+  }
+
+  .nav-list {
+    gap: 5rem;
+  }
+
+  .nav-list a {
+    font-size: 1.8rem;
+  }
 }

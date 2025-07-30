@@ -1,46 +1,101 @@
 .como-ayudamos {
-  width: 50%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  padding: 5rem 0;
-}
-
-.como-ayudamos h2 {
-  color: #000107;
-  font-size: 2.5rem;
-  margin-bottom: 4rem;
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
   text-align: center;
 }
 
-.como-ayudamos h3 {
-  color: #12269e;
-  font-size: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-.como-ayudamos p {
-  color: #000107;
-  font-size: 1.4rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-
-.icon {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-
-.primera-linea {
-  display: flex;
-  align-items: baseline;
-  margin-bottom: 1.5rem;
-  gap: 30px;
+.como-ayudamos h2 {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  color: #333;
 }
 
 .punto-fuerte {
-  margin-bottom: 50px;
+  display: flex;
+  align-items: center; /* Centra el icono verticalmente */
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ICONO GRANDE + CENTRADO VERTICAL */
+.icono {
+  flex-shrink: 0;
+  font-size: 3rem;
+  color: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+
+  /* Fondo redondo opcional */
+  background-color: #e6f0ff;
+  border-radius: 50%;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.titulo {
+  font-size: 1.25rem;
+  margin: 0;
+  color: #222;
+}
+
+.descripcion,
+.extra {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+
+.extra {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* 🖥️ Pantallas a partir de 768px */
+@media (min-width: 768px) {
+  .como-ayudamos {
+    padding: 4rem 2rem;
+  }
+
+  .como-ayudamos h2 {
+    margin-bottom: 6rem;
+    font-size: 3.5rem;
+  }
+
+  .punto-fuerte {
+    margin-top: 4rem;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem;
+  }
+
+  .icono {
+    font-size: 4rem;
+    width: 150px;
+    height: 150px;
+  }
+
+  .titulo {
+    font-size: 2.5rem;
+    color: #12269e;
+  }
+
+  .descripcion,
+  .extra {
+    margin-top: 1rem;
+    font-size: 2rem;
+    line-height: 1.6;
+  }
 }
