@@ -1,12 +1,12 @@
 /* === Base: Mobile First === */
 .servicios {
   background-color: #f9b347;
-  padding: 3rem 1.5rem;
+  padding: 4rem 1.5rem;
 }
 
 .servicios h2 {
   color: #12269e;
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin-bottom: 3rem;
   text-align: center;
 }

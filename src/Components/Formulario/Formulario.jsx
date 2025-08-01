@@ -38,11 +38,6 @@ function Formulario() {
   return (
     <section className="formulario-contacto-container">
       <h2 className="titulo-contacto">Contacta con nosotros</h2>
-      <p className="descripcion-contacto">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima natus
-        deleniti suscipit nesciunt ullam. Amet consectetur adipisicing elit.
-        Minima natus deleniti suscipit.
-      </p>
       <div className="contenido-contacto">
         <div className="informacion-contacto-container">
           <div className="info-telefono">

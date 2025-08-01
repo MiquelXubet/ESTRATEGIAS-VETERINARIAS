@@ -1,39 +1,48 @@
-/* === Base: Mobile First === */
+/* === Mobile First === */
 .main-header {
-  background-color: #ffffff;
-  padding: 10px 0;
+  background-color: #fff;
+  padding: 3px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1100;
 }
 
 .main-header-content {
-  width: 100%;
-  max-width: 90%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
-  text-align: center;
-  position: relative; /* para posicionar el botón */
+  position: relative;
 }
 
 /* Logo */
-.logo {
-  max-height: 120px;
+.logo,
+.nav-logo {
+  max-height: 100px;
   height: auto;
   width: auto;
   display: block;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-/* Botón hamburguesa (visible móvil/tablet) */
+/* Botón hamburguesa solo en móvil */
 .menu-toggle {
-  display: block;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 30px;
-  height: 25px;
+  width: 35px;
+  height: 30px;
   cursor: pointer;
-  z-index: 1000;
+  background: none;
+  border: none;
+  z-index: 1600;
+  padding: 0;
+  outline: none;
+  position: relative;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu-toggle span,
@@ -42,88 +51,114 @@
   display: block;
   position: absolute;
   width: 100%;
-  height: 4px;
+  height: 3px;
   background-color: #12269e;
-  border-radius: 2px;
-  transition: all 0.3s ease;
+  border-radius: 3px;
+  transition: all 0.4s ease;
 }
 
 .menu-toggle span {
   top: 50%;
-  margin-top: -2px;
+  left: 0;
+  transform: translateY(-50%);
 }
 
 .menu-toggle span::before {
   content: "";
-  top: -10px;
+  top: calc(50% - 10px);
+  left: 0;
 }
 
 .menu-toggle span::after {
   content: "";
-  top: 10px;
+  top: calc(50% + 10px);
+  left: 0;
 }
 
-/* Navegación */
+.menu-toggle.active span {
+  background-color: transparent;
+}
+
+.menu-toggle.active span::before {
+  transform: rotate(45deg);
+  top: 50%;
+}
+
+.menu-toggle.active span::after {
+  transform: rotate(-45deg);
+  top: 50%;
+}
+
+/* Menú hamburguesa móvil */
 .nav-list {
-  display: none; /* ocultamos menú por defecto en móvil/tablet */
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   list-style: none;
-  gap: 1rem;
+  gap: 2rem;
   margin: 0;
   padding: 0;
-  background: white;
-  width: 100%;
-  position: absolute;
-  top: 60px; /* justo debajo del header */
-  left: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 0 0 10px 10px;
-  z-index: 999;
+  z-index: 1500;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
-/* Cuando el menú está activo (mostrar) */
 .nav-list.active {
   display: flex;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .nav-list a {
-  font-size: 1.2rem;
-  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
   color: #12269e;
-  font-weight: bold;
-  transition: color 0.3s;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.nav-list a:hover {
+.nav-list a:hover,
+.nav-list a:focus {
   color: #f9b347;
 }
 
-/* === Tablets (≥600px) === */
+/* === Tablets y Desktop (≥600px) === */
 @media (min-width: 600px) {
   .main-header-content {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
+    max-width: 90%;
+    margin: 2rem auto;
   }
 
   .logo {
-    max-height: 180px;
+    max-height: 130px;
   }
 
-  /* Ocultar botón hamburguesa en tablet y desktop */
+  /* Ocultar hamburguesa en tablet y escritorio */
   .menu-toggle {
     display: none;
   }
 
+  /* Mostrar menú horizontal */
   .nav-list {
-    display: flex !important; /* forzar mostrar menú */
+    display: flex !important;
     position: static;
     flex-direction: row;
-    gap: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    background: none;
     width: auto;
-    box-shadow: none;
-    border-radius: 0;
+    height: auto;
+    opacity: 1;
+    pointer-events: auto;
+    gap: 2.5rem;
   }
 
   .nav-list a {
@@ -134,15 +169,17 @@
 /* === Desktop (≥1024px) === */
 @media (min-width: 1024px) {
   .main-header-content {
-    max-width: 80%;
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
   }
 
   .logo {
-    max-height: 250px;
+    max-height: 150px;
   }
 
   .nav-list {
-    gap: 5rem;
+    gap: 3rem;
   }
 
   .nav-list a {

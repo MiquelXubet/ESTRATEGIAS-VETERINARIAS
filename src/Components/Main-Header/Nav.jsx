@@ -1,9 +1,9 @@
 import React from "react";
 
-function Nav() {
+function Nav({ isOpen }) {
   return (
     <nav>
-      <ul className="nav-list">
+      <ul className={`nav-list ${isOpen ? "active" : ""}`}>
         <li>
           <a href="/servicios">Servicios</a>
         </li>

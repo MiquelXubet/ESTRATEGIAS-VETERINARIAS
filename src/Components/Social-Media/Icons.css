@@ -3,9 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px; /* más pequeño en móvil para no ocupar tanto espacio */
-  flex-wrap: wrap; /* permite que los íconos salten a otra línea si no caben */
-  padding: 0 1rem; /* un poco de espacio horizontal */
+  gap: 10px; /* más pequeño en móvil para no ocupar tanto espacio */
+  flex-wrap: wrap;
 }
 
 /* Tablets (≥600px) */

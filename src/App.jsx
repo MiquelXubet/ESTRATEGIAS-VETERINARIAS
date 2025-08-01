@@ -5,6 +5,7 @@ import Home from "./Components/Pages/Home";
 import Contacto from "./Components/Pages/Contacto";
 import Servicios from "./Components/Pages/Servicios";
 import Nosotros from "./Components/Pages/Nosotros";
+import "./App.css"; // Import your main CSS file
 
 function App() {
   return (

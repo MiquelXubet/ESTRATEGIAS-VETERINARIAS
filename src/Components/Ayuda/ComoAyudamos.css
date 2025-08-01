@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .como-ayudamos {
   padding: 2rem 1rem;
   background-color: #f9f9f9;
@@ -5,9 +9,10 @@
 }
 
 .como-ayudamos h2 {
+  text-align: center;
+  margin: 4rem 0;
   font-size: 1.75rem;
-  margin-bottom: 2rem;
-  color: #333;
+  color: #12269e;
 }
 
 .punto-fuerte {
@@ -27,11 +32,11 @@
   flex-shrink: 0;
   font-size: 3rem;
   color: #007bff;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  width: 64px;
-  height: 64px;
+  width: 40px;
+  height: 40px;
 
   /* Fondo redondo opcional */
   background-color: #e6f0ff;
@@ -47,11 +52,12 @@
 .titulo {
   font-size: 1.25rem;
   margin: 0;
-  color: #222;
+  color: #12269e;
 }
 
 .descripcion,
 .extra {
+  /* display: none; */
   font-size: 1rem;
   color: #555;
   margin: 0;
@@ -62,40 +68,94 @@
   color: #888;
 }
 
-/* 🖥️ Pantallas a partir de 768px */
-@media (min-width: 768px) {
+/* 🖥️ Pantallas a partir de 600px */
+@media (min-width: 600px) {
   .como-ayudamos {
-    padding: 4rem 2rem;
+    overflow-x: hidden;
   }
 
   .como-ayudamos h2 {
-    margin-bottom: 6rem;
-    font-size: 3.5rem;
+    margin: 4rem 0;
+    font-size: 2rem;
+    color: #12269e;
   }
 
   .punto-fuerte {
-    margin-top: 4rem;
-    max-width: 60%;
+    margin-top: 2rem;
+    max-width: 95%;
     margin-left: auto;
     margin-right: auto;
-    padding: 3rem;
+    padding: 2rem;
   }
 
   .icono {
-    font-size: 4rem;
-    width: 150px;
-    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
   }
 
   .titulo {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: #12269e;
   }
 
   .descripcion,
   .extra {
     margin-top: 1rem;
-    font-size: 2rem;
+    font-size: 1.2rem;
     line-height: 1.6;
+  }
+
+  .extra {
+    font-size: 1rem;
+    color: #888;
+  }
+}
+
+/* 🖥️ Pantallas a partir de 1024px */
+@media (min-width: 1024px) {
+  .como-ayudamos {
+    overflow-x: hidden;
+  }
+
+  .como-ayudamos h2 {
+    margin: 8rem 0;
+    font-size: 3rem;
+    color: #12269e;
+  }
+
+  .punto-fuerte {
+    margin-top: 4rem;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem;
+  }
+
+  .icono {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+  }
+
+  .titulo {
+    font-size: 2rem;
+    color: #12269e;
+  }
+
+  .descripcion,
+  .extra {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .extra {
+    font-size: 1.2rem;
+    color: #888;
   }
 }
