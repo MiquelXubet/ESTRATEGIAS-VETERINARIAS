@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import heroImage from "../../images/banner.png"; // Usa tu imagen aquí
+import heroImage from "../../Images/banner.png"; // Usa tu imagen aquí
 
 function Hero() {
   return (
