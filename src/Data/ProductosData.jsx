@@ -1,11 +1,11 @@
-import marketing from "../Images/mk-digital-vets.png";
-import email from "../Images/email-mk2.png";
-import automatizaciones from "../Images/automatizacion.png";
-import redes from "../Images/redes-sociales.png";
-import seo from "../Images/seo.png";
-import web from "../Images/diseño-web.png";
-import coroporativo from "../Images/diseño-corporativo.png";
-import contenidos from "../Images/blog1.png";
+import marketing from "../images/mk-digital-vets.png";
+import email from "../images/email-mk2.png";
+import automatizaciones from "../images/automatizacion.png";
+import redes from "../images/redes-sociales.png";
+import seo from "../images/seo.png";
+import web from "../images/diseño-web.png";
+import coroporativo from "../images/diseño-corporativo.png";
+import contenidos from "../images/blog1.png";
 
 const servicios = [
   { titulo: "Marketing Digital", imagen: marketing },
